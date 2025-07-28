@@ -21,10 +21,7 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   // Add your custom drawing code here, following the template structure.
-  stroke(0);
-  fill(165, 42, 42);
-  rectMode(CENTER);
-  rect(30, 30, 50, 50);
+ 
 
   // Example: add more shapes or patterns as desired
 }
