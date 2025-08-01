@@ -4,7 +4,10 @@ let x = 100;
 let y = 110;
 let hanabira = 11;
 let withoutglases = 10;
-let kyori = 60;
+//let kyori = 60;
+let angry = true;
+let cheeks  = 120;
+let starcolor = 10;
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -36,8 +39,7 @@ if (hanabira < 10) {
   ellipse(135, 50, 40, 40);
 }
 //顔
-let whitebear = true;
-if (whitebear) {
+if (false) {
   fill (255, 255, 255);
   ellipse(x, x, 90, 90); 
 } else {
@@ -69,7 +71,7 @@ if (withoutglases > 9) {
   
 
   //口
-let angry = true
+//let angry = true;
 if (angry) {
   line(90, 130, 100, 120);
   line(100, 120, 110, 130);
@@ -78,39 +80,38 @@ if (angry) {
   line(x, 130, y, 120);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   //鼻
   fill(0);
   ellipse(x, y, 15, 5);
-  //ほっぺ
+
+
+//ほっぺ
+if (cheeks >= 110) {
+ noStroke();
+ fill(240, 128, 128);
+ ellipse(70, y, 25, 20);
+ ellipse(130, y, 25, 20);
+} else {
   noStroke();
   fill(240, 128, 128);
   ellipse(70, y, 20, 15);
   ellipse(130, y, 20, 15);
-
-  //ellipse(100, 150, 20, 20);
-  //星
-  fill(255, 255, 0);
+}
+//星の色
+if (starcolor <= 34) {
+  fill(173, 255, 47); //green yellowe )
   ellipse(10, 10, 40, 20);
   ellipse(10, 10, 20, 40);
-  fill(255, 255, 0);
+  fill(173, 255, 47);
   ellipse(190, 190, 40, 20);
- ellipse(190, 190, 20, 40);
- fill(255, 165, 0);
- fill(255, 192, 203);
- ellipse( x, 10, 10, 50);
- ellipse( x, 10, 50, 11);
+  ellipse(190, 190, 20, 40);
 
+} else {
+ fill(255, 255, 0);
+ ellipse(10, 10, 40, 20);
+ ellipse(10, 10, 20, 40);
+ fill(255, 255, 0);
+ ellipse(190, 190, 40, 20);
+ ellipse(190, 190, 20, 40);
+}
 }
