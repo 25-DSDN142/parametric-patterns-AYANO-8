@@ -1,9 +1,8 @@
 //your parameter variables go here!
-let rect_width = 20;
-let rect_height = 30;
+//let rect_width = 20;
 let x = 100;
 let y = 110;
-let hanabira = 6;
+let hanabira = 11;
 let kyori = 60;
 
 function setup_wallpaper(pWallpaper) {
@@ -26,12 +25,15 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
 //耳
-
- 
+if (hanabira < 10) {
  fill(210, 105, 30);
  ellipse(65, 50, 40, 40);
  ellipse(135, 50, 40, 40);
-
+} else {
+  fill(255, 255, 255);
+  ellipse(65, 50, 40, 40);
+  ellipse(135, 50, 40, 40);
+}
 //顔
  fill(210, 105, 30);
  ellipse(x, x, 90, 90);
