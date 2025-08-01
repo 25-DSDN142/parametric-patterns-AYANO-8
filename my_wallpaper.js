@@ -2,12 +2,12 @@
 //let rect_width = 20;
 let x = 100;
 let y = 110;
-let hanabira = 11;
+let earcolor = 5;
 let withoutglases = 10;
 //let kyori = 60;
-let angry = true;
+let angry = false;
 let cheeks  = 120;
-let starcolor = 10;
+let starcolor = 50;
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -29,12 +29,12 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
 //耳
-if (hanabira < 10) {
- fill(210, 105, 30);
+if (earcolor < 10) {
+ fill(210, 105, 30);//chocolate brown
  ellipse(65, 50, 40, 40);
  ellipse(135, 50, 40, 40);
 } else {
-  fill(255, 255, 255);
+  fill(255, 255, 255); //white
   ellipse(65, 50, 40, 40);
   ellipse(135, 50, 40, 40);
 }
@@ -68,9 +68,7 @@ if (withoutglases > 9) {
  ellipse(82, 93, 5, 5);
  ellipse(122, 93, 5, 5);
 
-  
-
-  //口
+   //口
 //let angry = true;
 if (angry) {
   line(90, 130, 100, 120);
@@ -100,18 +98,35 @@ if (cheeks >= 110) {
 //星の色
 if (starcolor <= 34) {
   fill(173, 255, 47); //green yellowe )
-  ellipse(10, 10, 40, 20);
-  ellipse(10, 10, 20, 40);
-  fill(173, 255, 47);
-  ellipse(190, 190, 40, 20);
-  ellipse(190, 190, 20, 40);
-
+  ellipse(0, 0, 40, 20);
+  ellipse(0, 0, 20, 40);
 } else {
  fill(255, 255, 0);
- ellipse(10, 10, 40, 20);
- ellipse(10, 10, 20, 40);
- fill(255, 255, 0);
- ellipse(190, 190, 40, 20);
- ellipse(190, 190, 20, 40);
+ ellipse(0, 0, 40, 20);
+ ellipse(0, 0, 20, 40);
 }
+
+//左右にどっと
+for (let i = 0; i < 200; i= i + 20) {
+  fill(255, 255, 0);
+ ellipse(i, 0, 5, 5);
+ ellipse(i, 0, 5, 5);
+}
+
+//上下にどっと
+ for (let i = 0; i <200; i = i + 20) {
+  fill(255, 255, 0);
+  ellipse(0, i, 5, 5);
+  ellipse(200, i, 5, 5);
+ }
+ 
+
+
+
+
+
+
+
+
+
 }
