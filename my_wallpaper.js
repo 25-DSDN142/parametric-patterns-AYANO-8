@@ -35,8 +35,21 @@ if (hanabira < 10) {
   ellipse(135, 50, 40, 40);
 }
 //顔
+let whitebear = true;
+if (whitebear) {
+  fill (255, 255, 255);
+  ellipse(x, x, 90, 90); 
+} else {
  fill(210, 105, 30);
  ellipse(x, x, 90, 90);
+}
+
+
+
+
+
+
+
 //鼻まわり
  fill(222, 184, 135);
  ellipse(x, 120, 40, 30); 
