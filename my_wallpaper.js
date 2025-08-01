@@ -3,7 +3,7 @@
 let x = 100;
 let y = 110;
 let hanabira = 11;
-let eye = 8;
+let withoutglases = 10;
 let kyori = 60;
 
 function setup_wallpaper(pWallpaper) {
@@ -51,14 +51,14 @@ if (whitebear) {
   // Example: add more shapes or patterns as desired
   
   //目の大きさ
-if (eye > 9) {
+if (withoutglases > 9) {
   fill(0);
-  ellipse(80, 95, 10, 10);
-  ellipse(120, 95, 10, 10);
+  ellipse(80, 95, 12, 12);
+  ellipse(120, 95, 12, 12);
 } else {
   fill(0);
-  ellipse(80, 95, 20, 20);
-  ellipse(120, 95, 20, 20);  
+  ellipse(80, 95, 6, 6);
+  ellipse(120, 95, 6, 6);  
 }
   
 //目のハイライト
@@ -68,12 +68,29 @@ if (eye > 9) {
 
   
 
-  //目
-  
-
   //口
+let angry = true
+if (angry) {
+  line(90, 130, 100, 120);
+  line(100, 120, 110, 130);
+} else {
   line(x, 130, 90, 120);
   line(x, 130, y, 120);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //鼻
   fill(0);
   ellipse(x, y, 15, 5);
