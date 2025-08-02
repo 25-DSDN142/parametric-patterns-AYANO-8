@@ -8,7 +8,7 @@ let angry = false;
 let cheeks  = 120;
 let starcolor = 50;
 let hand = false;
-let gentleman = false;
+let gentleman = true;
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -71,14 +71,17 @@ if (withoutglases > 9) {
 
    //口
 //let angry = true;
-/*
+
 if (angry) {
   line(90, 130, 100, 120);
   line(100, 120, 110, 130);
 } else {
  line(x, 130, 90, 120);
  line(x, 130, y, 120);
-}*/
+}
+
+ 
+
 
   //鼻
   fill(0);
@@ -146,7 +149,6 @@ for (let i = 0; i < 200; i= i + 20) {
 
 
 
-
 //手
 
 if (hand) {
@@ -179,9 +181,9 @@ ellipse(100, 150, 7, 7);
 triangle(120, 140, 120, 160, 100, 150);
 }
 
-//nofill();
-//stroke(0);
-//arc()
+textSize(20);
+fill(176, 224, 230);
+text("happy", 73, 165);
 
 
 
@@ -190,8 +192,11 @@ triangle(120, 140, 120, 160, 100, 150);
 
 
 
-
-
+//笑顔 smail
+ //noFill();
+ //stroke(0);
+ //strokeWeight(2);
+ //arc(100, 150, 150, 100, 0, PI);
 
 
 }
