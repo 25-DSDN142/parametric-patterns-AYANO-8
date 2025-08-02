@@ -2,12 +2,12 @@
 //let rect_width = 20;
 let x = 100;
 let y = 110;
-let earcolor = 5;
+let earcolor = 11;
 let withoutglasses = 10;
 let angry = false;
 let cheeks  = 180;
-let starcolor = 30;
-let hand = false;
+let starcolor = 100;
+let hand = true;
 let size = 100;
 let gentleman = true;
 let letter = true;
@@ -29,7 +29,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(241,194,124); //light honeydew green colour
+  background(35,59,108); //light honeydew green colour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -46,7 +46,7 @@ if (earcolor < 10) {
 }
 
 //顔//face//falseなら茶色の顔//if false, fill the face with chocolate brown
-let pinkface = false
+let pinkface = true
 if (pinkface) {
   fill (255, 20, 147);//deep pink
   ellipse(x, x, 90, 90); 
