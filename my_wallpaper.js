@@ -6,9 +6,9 @@ let earcolor = 9;
 let withoutglasses = 10;
 let angry = false;
 let cheeks  = 120;
-let starcolor = 50;
-let hand = true;
-let size = 45;
+let starcolor = 30;
+let hand = false;
+let size = 100;
 let gentleman = true;
 let letter = true;
 
@@ -26,7 +26,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(102, 205, 170); //light honeydew green colour
+  background(241,194,124); //light honeydew green colour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -37,14 +37,14 @@ if (earcolor < 10) {
  ellipse(65, 50, 40, 40);
  ellipse(135, 50, 40, 40);
 } else {
-  fill(255, 255, 255); //white
+  fill(255,20,147); //white
   ellipse(65, 50, 40, 40);
   ellipse(135, 50, 40, 40);
 }
 
 //顔//face//falseなら茶色の顔//if false, fill the face with chocolate brown
 if (false) {
-  fill (255, 255, 255);//white
+  fill (255,20,147);//white
   ellipse(x, x, 90, 90); 
 } else {
  fill(210, 105, 30);//chpcolate brown
@@ -122,20 +122,20 @@ for (let i = 0; i < 200; i= i + 20) {
 
  } else { 
 //黄色//yellow
-  fill(255, 255, 0); 
+  fill(6,135,200); 
   ellipse(0, 0, 40, 20);
   ellipse(0, 0, 20, 40);
  
 //左右にどっと//yellow dots for left and rigth
  for (let i = 0; i < 200; i= i + 20) {
-  fill(255, 255, 0);
+  fill(6,135,200);
  ellipse(i, 0, 5, 5);
  ellipse(i, 200, 5, 5);
  }
 
 //上下にどっと//yellow dots for above and under
  for (let i = 0; i <200; i = i + 20) {
-  fill(255, 255, 0);
+  fill(6,135,200);
   ellipse(0, i, 5, 5);
   ellipse(200, i, 5, 5);
     }
@@ -147,7 +147,7 @@ for (let i = 0; i < 200; i= i + 20) {
 if (hand) { 
   
   if (size > 50) {//ネストされたif
-   fill(255, 255, 255);//white
+   fill(255,20,147);//white
   }else {
    fill(210, 105, 30);//chocolate brown
   }
@@ -173,7 +173,7 @@ ellipse(145, 155, 16, 13);
 
 //リボン//ribbon//もしgentlemanがtrueならリボン現る//if the gentleman is true, the ribbon will apear
 if (gentleman) {
-fill(255,20,147);//deep pink
+fill(255, 255, 255);//deep pink
 triangle(80, 140, 80, 160, 100, 150);//left ribbon
 ellipse(100, 150, 7, 7);
 triangle(120, 140, 120, 160, 100, 150);//right ribbon
@@ -182,7 +182,7 @@ triangle(120, 140, 120, 160, 100, 150);//right ribbon
 if (letter) {
 
  textSize(20);
- fill(255,20,147);
+ fill(255, 255, 255);//deep pink
  text("happy", 73, 175);
 
 }
