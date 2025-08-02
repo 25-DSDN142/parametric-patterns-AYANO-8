@@ -2,15 +2,15 @@
 //let rect_width = 20;
 let x = 100;
 let y = 110;
-let earcolor = 11;
-let withoutglasses = 10;
+let earcolor = 9;
+let withoutglasses = 50;
 let angry = false;
-let cheeks  = 180;
-let starcolor = 100;
+let cheeks  = 100;
+let starcolor = 50;
 let hand = true;
-let size = 100;
-let gentleman = true;
-let letter = true;
+let size =45;
+let gentleman = false;
+let letter = false;
 //let browncolor = color(210, 105, 30);//chocolate brown
 //let deeppink = color(255, 20, 147);
 //let bluecolor = color(6, 135, 200);
@@ -46,7 +46,7 @@ if (earcolor < 10) {
 }
 
 //顔//face//falseなら茶色の顔//if false, fill the face with chocolate brown
-let pinkface = true
+let pinkface = false
 if (pinkface) {
   fill (255, 20, 147);//deep pink
   ellipse(x, x, 90, 90); 
