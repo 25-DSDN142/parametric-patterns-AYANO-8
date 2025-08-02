@@ -2,12 +2,13 @@
 //let rect_width = 20;
 let x = 100;
 let y = 110;
-let earcolor = 5;
+let earcolor = 9;
 let withoutglases = 10;
 let angry = false;
 let cheeks  = 120;
 let starcolor = 50;
-let hand = false;
+let hand = true;
+let size = 45;
 let gentleman = true;
 
 function setup_wallpaper(pWallpaper) {
@@ -151,12 +152,20 @@ for (let i = 0; i < 200; i= i + 20) {
 
 //手
 
-if (hand) {
+if (hand) { 
+  
+  if (size > 50) {
+   fill(255, 255, 255);
+  }else {
+    fill(210, 105, 30);
+
+  }
+
 stroke(0);
-fill(210, 105, 30);
+//fill(210, 105, 30);
 ellipse(55, 150, 35, 30);
 
-fill(210, 105, 30);
+//fill(210, 105, 30);
 ellipse(145, 150, 35, 30);
 
 //肉球
@@ -172,20 +181,25 @@ ellipse(135, 145, 7, 7);
 ellipse(145, 143, 7, 7);
 ellipse(155, 145, 7, 7);
 ellipse(145, 155, 16, 13); 
-} 
+
+  
+}
 
 if (gentleman) {
-fill(220, 20, 60);
+fill(255,20,147);
 triangle(80, 140, 80, 160, 100, 150);
 ellipse(100, 150, 7, 7);
 triangle(120, 140, 120, 160, 100, 150);
 }
 
-textSize(20);
-fill(176, 224, 230);
-text("happy", 73, 165);
+let 文字 = true;
+if (文字) {
 
+ textSize(20);
+ fill(255,20,147);
+ text("happy", 73, 175);
 
+}
 
 
 
