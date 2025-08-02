@@ -2,15 +2,18 @@
 //let rect_width = 20;
 let x = 100;
 let y = 110;
-let earcolor = 9;
+let earcolor = 5;
 let withoutglasses = 10;
 let angry = false;
-let cheeks  = 120;
+let cheeks  = 180;
 let starcolor = 30;
 let hand = false;
 let size = 100;
 let gentleman = true;
 let letter = true;
+//let browncolor = color(210, 105, 30);//chocolate brown
+//let deeppink = color(255, 20, 147);
+//let bluecolor = color(6, 135, 200);
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -37,14 +40,15 @@ if (earcolor < 10) {
  ellipse(65, 50, 40, 40);
  ellipse(135, 50, 40, 40);
 } else {
-  fill(255,20,147); //white
+  fill(255, 20, 147); //deep pink
   ellipse(65, 50, 40, 40);
   ellipse(135, 50, 40, 40);
 }
 
 //顔//face//falseなら茶色の顔//if false, fill the face with chocolate brown
-if (false) {
-  fill (255,20,147);//white
+let pinkface = false
+if (pinkface) {
+  fill (255, 20, 147);//deep pink
   ellipse(x, x, 90, 90); 
 } else {
  fill(210, 105, 30);//chpcolate brown
@@ -71,7 +75,7 @@ if (withoutglasses > 9) {
  ellipse(82, 93, 5, 5);//left
  ellipse(122, 93, 5, 5);//right
 
-//口//mouse//もしangryがほんとなら口がへの字になる//if angry is true, the mouse courves downward
+//口//mouth//もしangryがほんとなら口がへの字になる//if angry is true, the mouth courves downward
 if (angry) {
   line(90, 130, 100, 120);
   line(100, 120, 110, 130);
@@ -98,7 +102,7 @@ if (cheeks >= 110) {
   ellipse(130, y, 20, 15);//right cheek
 }
 
-//星の色//color of stars//もしstarcolorが34かそれ以下なら星とドットの色は山吹色//if the value of starcolor is 34 or more than 34, stars and dots become yellow 
+//星の色//color of stars//もしstarcolorが34かそれ以下なら星とドットの色は山吹色//if the value of starcolor is 34 or less 34, stars and dots become yamabuki color
  if (starcolor <= 34) {
 
   fill(248, 180, 0);//山吹色//yamabuki
@@ -106,14 +110,14 @@ if (cheeks >= 110) {
   ellipse(0, 0, 20, 40);
 
 
-//左右にどっと//yamabuki color dots for left and right
+//左右にどっと//yamabuki color dots for left and right//20ずつのスペースが開けられるfrom AI//
 for (let i = 0; i < 200; i= i + 20) {
   fill(248, 180, 0);
  ellipse(i, 0, 5, 5);
  ellipse(i, 200, 5, 5);
 }
 
-//上下にどっと//yamabuki color dots for above and under//20ずつのスペースが開けられるfrom AI//
+//上下にどっと//yamabuki color dots for above and under
  for (let i = 0; i <200; i = i + 20) {
   fill(248, 180, 0);
   ellipse(0, i, 5, 5);
@@ -121,21 +125,21 @@ for (let i = 0; i < 200; i= i + 20) {
  }
 
  } else { 
-//黄色//yellow
-  fill(6,135,200); 
+//ターコイズブルー//blue
+  fill(6, 135, 200);//blue
   ellipse(0, 0, 40, 20);
   ellipse(0, 0, 20, 40);
  
-//左右にどっと//yellow dots for left and rigth
+//左右にどっと//blue dots for left and rigth
  for (let i = 0; i < 200; i= i + 20) {
-  fill(6,135,200);
+  fill(6, 135, 200);
  ellipse(i, 0, 5, 5);
  ellipse(i, 200, 5, 5);
  }
 
-//上下にどっと//yellow dots for above and under
+//上下にどっと//blue dots for above and under
  for (let i = 0; i <200; i = i + 20) {
-  fill(6,135,200);
+  fill(6, 135, 200);
   ellipse(0, i, 5, 5);
   ellipse(200, i, 5, 5);
     }
@@ -143,11 +147,11 @@ for (let i = 0; i < 200; i= i + 20) {
 
 
 
-//手//hand//trueなら手現れる//if the hand is true, the hand will appear/sizeが50より大きいなら白い手になる//if the value of size is bigger than 50, the hand will be white
+//手//hand//trueなら手現れる//if the hand is true, the hand will appear/sizeが50より大きいならピンクの手になる//if the value of size is bigger than 50, the hand will be deep pink
 if (hand) { 
   
   if (size > 50) {//ネストされたif
-   fill(255,20,147);//white
+   fill(255, 20, 147);//deep pink
   }else {
    fill(210, 105, 30);//chocolate brown
   }
@@ -173,7 +177,7 @@ ellipse(145, 155, 16, 13);
 
 //リボン//ribbon//もしgentlemanがtrueならリボン現る//if the gentleman is true, the ribbon will apear
 if (gentleman) {
-fill(255, 255, 255);//deep pink
+fill(255, 255, 255);//white
 triangle(80, 140, 80, 160, 100, 150);//left ribbon
 ellipse(100, 150, 7, 7);
 triangle(120, 140, 120, 160, 100, 150);//right ribbon
@@ -182,14 +186,14 @@ triangle(120, 140, 120, 160, 100, 150);//right ribbon
 if (letter) {
 
  textSize(20);
- fill(255, 255, 255);//deep pink
+ fill(255, 255, 255);//white
  text("happy", 73, 175);
 
 }
-//笑顔 smail
+//笑顔 smile
  /*noFill();
  stroke(0);
  strokeWeight(2);
  arc(100, 150, 150, 100, 0, PI);
- */
+ ← I was not able to use this coad*/
 }
