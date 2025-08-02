@@ -3,7 +3,7 @@
 let x = 100;
 let y = 110;
 let earcolor = 9;
-let withoutglases = 10;
+let withoutglasses = 10;
 let angry = false;
 let cheeks  = 120;
 let starcolor = 50;
@@ -30,7 +30,7 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-//耳
+//耳//ears//earcolorが１０より小さかったら、茶色//if earcolor is less than 10, fill with chocolate brown
 if (earcolor < 10) {
  fill(210, 105, 30);//chocolate brown
  ellipse(65, 50, 40, 40);
@@ -40,39 +40,37 @@ if (earcolor < 10) {
   ellipse(65, 50, 40, 40);
   ellipse(135, 50, 40, 40);
 }
-//顔
+
+//顔//face//falseなら茶色の顔//if false, fill the face with chocolate brown
 if (false) {
-  fill (255, 255, 255);
+  fill (255, 255, 255);//white
   ellipse(x, x, 90, 90); 
 } else {
- fill(210, 105, 30);
+ fill(210, 105, 30);//chpcolate brown
  ellipse(x, x, 90, 90);
 }
 
-//鼻まわり
+//鼻まわり//around nose
  fill(222, 184, 135);
  ellipse(x, 120, 40, 30); 
-  // Example: add more shapes or patterns as desired
   
-  //目の大きさ
-if (withoutglases > 9) {
+//目の大きさ//eyes size//眼鏡なしが９より小さかったら目小さくなる//if withoutglasses is smaller than 9, the eyes become small
+if (withoutglasses > 9) {
   fill(0);
-  ellipse(80, 95, 12, 12);
-  ellipse(120, 95, 12, 12);
+  ellipse(80, 95, 12, 12);//left eye
+  ellipse(120, 95, 12, 12);//right eye
 } else {
   fill(0);
-  ellipse(80, 95, 6, 6);
-  ellipse(120, 95, 6, 6);  
+  ellipse(80, 95, 6, 6);//left small eye
+  ellipse(120, 95, 6, 6); //right small eye
 }
   
-//目のハイライト
- fill(255, 255, 255);
- ellipse(82, 93, 5, 5);
- ellipse(122, 93, 5, 5);
+//目のハイライト//eye highlight
+fill(255, 255, 255);
+ ellipse(82, 93, 5, 5);//left
+ ellipse(122, 93, 5, 5);//right
 
-   //口
-//let angry = true;
-
+//口//mouse//もしangryがほんとなら口がへの字になる//if angry is true, the mouse courves downward
 if (angry) {
   line(90, 130, 100, 120);
   line(100, 120, 110, 130);
@@ -81,15 +79,12 @@ if (angry) {
  line(x, 130, y, 120);
 }
 
- 
-
-
-  //鼻
+//鼻//nose
   fill(0);
   ellipse(x, y, 15, 5);
 
 
-//ほっぺ
+//ほっぺ//cheeks//もしcheeksが110かそれ以上なら、ほっぺが大きくなる//if ckeeks is 110 or higher, the cheeks become big
 if (cheeks >= 110) {
  noStroke();
  fill(240, 128, 128);
