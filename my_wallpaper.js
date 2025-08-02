@@ -10,6 +10,7 @@ let starcolor = 50;
 let hand = true;
 let size = 45;
 let gentleman = true;
+let letter = true;
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -66,7 +67,7 @@ if (withoutglasses > 9) {
 }
   
 //目のハイライト//eye highlight
-fill(255, 255, 255);
+ fill(255, 255, 255);
  ellipse(82, 93, 5, 5);//left
  ellipse(122, 93, 5, 5);//right
 
@@ -88,34 +89,31 @@ if (angry) {
 if (cheeks >= 110) {
  noStroke();
  fill(240, 128, 128);
- ellipse(70, y, 25, 20);
- ellipse(130, y, 25, 20);
+ ellipse(70, y, 25, 20);//left big cheek
+ ellipse(130, y, 25, 20);//right big cheek
 } else {
   noStroke();
   fill(240, 128, 128);
-  ellipse(70, y, 20, 15);
-  ellipse(130, y, 20, 15);
+  ellipse(70, y, 20, 15);//left cheek
+  ellipse(130, y, 20, 15);//right cheek
 }
 
+//星の色//color of stars//もしstarcolorが34かそれ以下なら星とドットの色は山吹色//if the value of starcolor is 34 or more than 34, stars and dots become yellow 
+ if (starcolor <= 34) {
 
-
-
-//星の色
-if (starcolor <= 34) {
-
-  fill(248, 180, 0); 
+  fill(248, 180, 0);//山吹色//yamabuki
   ellipse(0, 0, 40, 20);
   ellipse(0, 0, 20, 40);
 
 
-//左右にどっと
+//左右にどっと//yamabuki color dots for left and right
 for (let i = 0; i < 200; i= i + 20) {
   fill(248, 180, 0);
  ellipse(i, 0, 5, 5);
  ellipse(i, 200, 5, 5);
 }
 
-//上下にどっと
+//上下にどっと//yamabuki color dots for above and under//20ずつのスペースが開けられるfrom AI//
  for (let i = 0; i <200; i = i + 20) {
   fill(248, 180, 0);
   ellipse(0, i, 5, 5);
@@ -123,19 +121,19 @@ for (let i = 0; i < 200; i= i + 20) {
  }
 
  } else { 
-  // 黄色
+//黄色//yellow
   fill(255, 255, 0); 
   ellipse(0, 0, 40, 20);
   ellipse(0, 0, 20, 40);
  
-//左右にどっと
+//左右にどっと//yellow dots for left and rigth
  for (let i = 0; i < 200; i= i + 20) {
   fill(255, 255, 0);
  ellipse(i, 0, 5, 5);
  ellipse(i, 200, 5, 5);
  }
 
-//上下にどっと
+//上下にどっと//yellow dots for above and under
  for (let i = 0; i <200; i = i + 20) {
   fill(255, 255, 0);
   ellipse(0, i, 5, 5);
@@ -145,25 +143,20 @@ for (let i = 0; i < 200; i= i + 20) {
 
 
 
-//手
-
+//手//hand//trueなら手現れる//if the hand is true, the hand will appear/sizeが50より大きいなら白い手になる//if the value of size is bigger than 50, the hand will be white
 if (hand) { 
   
-  if (size > 50) {
-   fill(255, 255, 255);
+  if (size > 50) {//ネストされたif
+   fill(255, 255, 255);//white
   }else {
-    fill(210, 105, 30);
-
+   fill(210, 105, 30);//chocolate brown
   }
-
+//手の平
 stroke(0);
-//fill(210, 105, 30);
 ellipse(55, 150, 35, 30);
-
-//fill(210, 105, 30);
 ellipse(145, 150, 35, 30);
 
-//肉球
+//肉球//paw pad
 noStroke();
 fill(0);
 ellipse(45, 145, 7, 7);
@@ -175,45 +168,28 @@ fill(0);
 ellipse(135, 145, 7, 7);
 ellipse(145, 143, 7, 7);
 ellipse(155, 145, 7, 7);
-ellipse(145, 155, 16, 13); 
-
-  
+ellipse(145, 155, 16, 13);   
 }
 
+//リボン//ribbon//もしgentlemanがtrueならリボン現る//if the gentleman is true, the ribbon will apear
 if (gentleman) {
-fill(255,20,147);
-triangle(80, 140, 80, 160, 100, 150);
+fill(255,20,147);//deep pink
+triangle(80, 140, 80, 160, 100, 150);//left ribbon
 ellipse(100, 150, 7, 7);
-triangle(120, 140, 120, 160, 100, 150);
+triangle(120, 140, 120, 160, 100, 150);//right ribbon
 }
 
-let 文字 = true;
-if (文字) {
+if (letter) {
 
  textSize(20);
  fill(255,20,147);
  text("happy", 73, 175);
 
 }
-
-
-
-
-
-
 //笑顔 smail
- //noFill();
- //stroke(0);
- //strokeWeight(2);
- //arc(100, 150, 150, 100, 0, PI);
-
-
+ /*noFill();
+ stroke(0);
+ strokeWeight(2);
+ arc(100, 150, 150, 100, 0, PI);
+ */
 }
-
-
-
-
-
-
-
-
