@@ -4,10 +4,11 @@ let x = 100;
 let y = 110;
 let earcolor = 5;
 let withoutglases = 10;
-//let kyori = 60;
 let angry = false;
 let cheeks  = 120;
 let starcolor = 50;
+let hand = false;
+let gentleman = false;
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -70,13 +71,14 @@ if (withoutglases > 9) {
 
    //口
 //let angry = true;
+/*
 if (angry) {
   line(90, 130, 100, 120);
   line(100, 120, 110, 130);
 } else {
-  line(x, 130, 90, 120);
-  line(x, 130, y, 120);
-}
+ line(x, 130, 90, 120);
+ line(x, 130, y, 120);
+}*/
 
   //鼻
   fill(0);
@@ -95,31 +97,94 @@ if (cheeks >= 110) {
   ellipse(70, y, 20, 15);
   ellipse(130, y, 20, 15);
 }
+
+
+
+
 //星の色
 if (starcolor <= 34) {
-  fill(173, 255, 47); //green yellowe )
+
+  fill(248, 180, 0); 
   ellipse(0, 0, 40, 20);
   ellipse(0, 0, 20, 40);
-} else {
- fill(255, 255, 0);
- ellipse(0, 0, 40, 20);
- ellipse(0, 0, 20, 40);
-}
+
 
 //左右にどっと
 for (let i = 0; i < 200; i= i + 20) {
+  fill(248, 180, 0);
+ ellipse(i, 0, 5, 5);
+ ellipse(i, 200, 5, 5);
+}
+
+//上下にどっと
+ for (let i = 0; i <200; i = i + 20) {
+  fill(248, 180, 0);
+  ellipse(0, i, 5, 5);
+  ellipse(200, i, 5, 5);
+ }
+
+ } else { 
+  // 黄色
+  fill(255, 255, 0); 
+  ellipse(0, 0, 40, 20);
+  ellipse(0, 0, 20, 40);
+ 
+//左右にどっと
+ for (let i = 0; i < 200; i= i + 20) {
   fill(255, 255, 0);
  ellipse(i, 0, 5, 5);
- ellipse(i, 0, 5, 5);
-}
+ ellipse(i, 200, 5, 5);
+ }
 
 //上下にどっと
  for (let i = 0; i <200; i = i + 20) {
   fill(255, 255, 0);
   ellipse(0, i, 5, 5);
   ellipse(200, i, 5, 5);
+    }
  }
- 
+
+
+
+
+//手
+
+if (hand) {
+stroke(0);
+fill(210, 105, 30);
+ellipse(55, 150, 35, 30);
+
+fill(210, 105, 30);
+ellipse(145, 150, 35, 30);
+
+//肉球
+noStroke();
+fill(0);
+ellipse(45, 145, 7, 7);
+ellipse(55, 143, 7, 7);
+ellipse(65, 145, 7, 7);
+ellipse(55, 155, 16, 13);
+
+fill(0); 
+ellipse(135, 145, 7, 7);
+ellipse(145, 143, 7, 7);
+ellipse(155, 145, 7, 7);
+ellipse(145, 155, 16, 13); 
+} 
+
+if (gentleman) {
+fill(220, 20, 60);
+triangle(80, 140, 80, 160, 100, 150);
+ellipse(100, 150, 7, 7);
+triangle(120, 140, 120, 160, 100, 150);
+}
+
+//nofill();
+//stroke(0);
+//arc()
+
+
+
 
 
 
@@ -130,3 +195,11 @@ for (let i = 0; i < 200; i= i + 20) {
 
 
 }
+
+
+
+
+
+
+
+
