@@ -2,18 +2,18 @@
 //let rect_width = 20;
 let x = 100;
 let y = 110;
-let earcolor = 9;
-let withoutglasses = 50;
+let earcolor = 120;
+let pinkface = true;
+let withoutglasses = 100;
 let angry = false;
 let cheeks  = 100;
-let starcolor = 50;
-let hand = true;
-let size =45;
+let starcolor = 60;
+let hand = false;
+let size =55;
 let gentleman = false;
-let letter = false;
+let letter = true;
 //let browncolor = color(210, 105, 30);//chocolate brown
 //let deeppink = color(255, 20, 147);
-//let bluecolor = color(6, 135, 200);
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -28,8 +28,9 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.row_offset  = 0;
 }
 
+
 function wallpaper_background() {
-  background(35,59,108); //light honeydew green colour
+  background(35,59,108); //blue colour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -46,7 +47,6 @@ if (earcolor < 10) {
 }
 
 //顔//face//falseなら茶色の顔//if false, fill the face with chocolate brown
-let pinkface = false
 if (pinkface) {
   fill (255, 20, 147);//deep pink
   ellipse(x, x, 90, 90); 
@@ -187,7 +187,7 @@ if (letter) {
 
  textSize(20);
  fill(255, 255, 255);//white
- text("happy", 73, 175);
+ text("Happy", 71, 175);
 
 }
 //笑顔 smile
